@@ -19,19 +19,21 @@
 ]]></content>
   </entry>
   <entry>
-    <title>第一篇文章</title>
+    <title>windows11问题</title>
     <url>/2023/09/15/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<p>第一盘文章</p>
-<p>熟悉熟悉熟悉熟悉是第一盘文章</p>
-<p>熟悉熟悉熟悉熟悉是</p>
-<p>第一盘文章</p>
-<p>熟悉熟悉熟悉熟悉是</p>
-<p>第一盘文章</p>
-<p>熟悉熟悉熟悉熟悉是</p>
-<p>第一盘文章</p>
-<p>熟悉熟悉熟悉熟悉是</p>
-<p>第一盘文章</p>
-<p>熟悉熟悉熟悉熟悉是</p>
+    <content><![CDATA[<h2 id="win11-保存文件为什么显示：你没有权限在此-位置保存文件，请与管理员联系以获取相关权限"><a href="#win11-保存文件为什么显示：你没有权限在此-位置保存文件，请与管理员联系以获取相关权限" class="headerlink" title="win11 保存文件为什么显示：你没有权限在此 位置保存文件，请与管理员联系以获取相关权限"></a>win11 保存文件为什么显示：你没有权限在此 位置保存文件，请与管理员联系以获取相关权限</h2><p><a href="https://www.cnblogs.com/mxnote/articles/17143123.html">https://www.cnblogs.com/mxnote/articles/17143123.html</a></p>
+<h2 id="解决-win10-找不到文件-gpedit-msc"><a href="#解决-win10-找不到文件-gpedit-msc" class="headerlink" title="解决 win10 找不到文件 gpedit.msc"></a>解决 win10 找不到文件 gpedit.msc</h2><p><strong>gpedit.msc 是常用到的一种命令，在运行里输入</strong>gpedit.msc 命令以后<strong>可以打开本地策略组编辑器，但是有的电脑输入该命令以后确提示找不到如下图，如个别的</strong>win10 家庭版</p>
+<p><strong>解决方法：</strong></p>
+<p>**1.**打开记事本，输入以下代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@echo off</span><br><span class="line"></span><br><span class="line">pushd &quot;%~dp0&quot;</span><br><span class="line"></span><br><span class="line">dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &gt;List.txt</span><br><span class="line"></span><br><span class="line">dir /b C:\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &gt;&gt;List.txt</span><br><span class="line"></span><br><span class="line">for /f %%i in (&#x27;findstr /i . List.txt 2^&gt;nul&#x27;) do dism /online /norestart /add-package:&quot;C:\Windows\servicing\Packages\%%i&quot;</span><br><span class="line"></span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+
+<p>右键另存为.bat 文件，然后右键打开运行。</p>
 ]]></content>
+      <categories>
+        <category>电脑</category>
+      </categories>
+      <tags>
+        <tag>windows11问题</tag>
+      </tags>
   </entry>
 </search>
