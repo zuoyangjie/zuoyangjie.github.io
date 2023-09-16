@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-09-16T14:13:30.559Z</updated>
+  <updated>2023-09-16T15:28:37.683Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git学习第一天</title>
+    <link href="http://example.com/2023/09/16/git%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/"/>
+    <id>http://example.com/2023/09/16/git%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/</id>
+    <published>2023-09-16T14:58:47.000Z</published>
+    <updated>2023-09-16T15:28:37.683Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://pic35.photophoto.cn/20150511/0034034892281415_b.jpg&quot;&gt;&lt;br&gt;学习了git commit，git stash</summary>
+        
+      
+    
+    
+    
+    
+    <category term="日记" scheme="http://example.com/tags/%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo博客出现Cannot GET/xxx错误</title>
@@ -121,7 +144,7 @@
     <link href="http://example.com/2023/09/15/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/"/>
     <id>http://example.com/2023/09/15/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/</id>
     <published>2023-09-15T02:02:36.000Z</published>
-    <updated>2023-09-16T14:15:21.464Z</updated>
+    <updated>2023-09-16T14:57:35.460Z</updated>
     
     
       
