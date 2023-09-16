@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-09-15T16:05:22.870Z</updated>
+  <updated>2023-09-16T06:52:07.069Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,86 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>git合并分支的方法</title>
+    <link href="http://example.com/2023/09/16/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://example.com/2023/09/16/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</id>
+    <published>2023-09-16T06:42:38.581Z</published>
+    <updated>2023-09-16T06:52:07.069Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="面试题" scheme="http://example.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="git" scheme="http://example.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/git/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CORS跨域请求[简单请求与复杂请求]</title>
+    <link href="http://example.com/2023/09/16/CORS%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82[%E7%AE%80%E5%8D%95%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%A4%8D%E6%9D%82%E8%AF%B7%E6%B1%82]/"/>
+    <id>http://example.com/2023/09/16/CORS%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82[%E7%AE%80%E5%8D%95%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%A4%8D%E6%9D%82%E8%AF%B7%E6%B1%82]/</id>
+    <published>2023-09-16T06:28:41.175Z</published>
+    <updated>2023-09-16T06:30:47.816Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;跨域资源共享标准新增了一组 HTTP 首部字段，允许服务器声明哪些源站通过浏览器有权限访问哪些资源。另外，规范要求，对那些可能对服务器数据产生副作用的 HTTP 请求方法（特别是GET以外的 HTTP 请求，或者搭配某些 MIME 类型的POST请求），浏览器必须首先使用</summary>
+        
+      
+    
+    
+    
+    <category term="面试题" scheme="http://example.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    <category term="网络" scheme="http://example.com/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客出现Cannot GET/xxx错误</title>
+    <link href="http://example.com/2023/09/16/Hexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0Cannot-GET-xxx%E9%94%99%E8%AF%AF/"/>
+    <id>http://example.com/2023/09/16/Hexo%E5%8D%9A%E5%AE%A2%E5%87%BA%E7%8E%B0Cannot-GET-xxx%E9%94%99%E8%AF%AF/</id>
+    <published>2023-09-16T05:30:54.000Z</published>
+    <updated>2023-09-16T06:28:03.648Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在Hexo博客中，出现Cannot GET&amp;#x2F;xxx错误便意味着xxx文件未被找到。Cannot GET&amp;#x2F;xxx错误本质是hexo</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="http://example.com/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>windows11问题</title>
-    <link href="http://example.com/2023/09/15/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
-    <id>http://example.com/2023/09/15/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</id>
-    <published>2023-09-15T13:02:36.000Z</published>
-    <updated>2023-09-15T16:05:22.870Z</updated>
+    <link href="http://example.com/2023/09/14/windows11%E9%97%AE%E9%A2%98/"/>
+    <id>http://example.com/2023/09/14/windows11%E9%97%AE%E9%A2%98/</id>
+    <published>2023-09-14T13:02:36.000Z</published>
+    <updated>2023-09-16T06:34:04.908Z</updated>
     
     
       
@@ -37,28 +112,7 @@
     <category term="电脑" scheme="http://example.com/categories/%E7%94%B5%E8%84%91/"/>
     
     
-    <category term="windows11问题" scheme="http://example.com/tags/windows11%E9%97%AE%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/2023/09/15/hello-world/"/>
-    <id>http://example.com/2023/09/15/hello-world/</id>
-    <published>2023-09-15T12:56:38.997Z</published>
-    <updated>2023-09-15T12:56:38.997Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
+    <category term="面试题" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
   </entry>
   
