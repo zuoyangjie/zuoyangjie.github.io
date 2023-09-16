@@ -2,33 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2023/09/16/git-stash%E7%94%A8%E6%B3%95%E5%B0%8F%E7%BB%93/</loc>
-    
-    <lastmod>2023-09-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2023/09/16/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    
-    <lastmod>2023-09-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2023/09/16/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
-    
-    <lastmod>2023-09-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/2023/09/14/windows11%E9%97%AE%E9%A2%98/</loc>
     
     <lastmod>2023-09-16</lastmod>
@@ -38,7 +11,34 @@
   </url>
   
   <url>
-    <loc>http://example.com/2023/09/16/CORS%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82[%E7%AE%80%E5%8D%95%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%A4%8D%E6%9D%82%E8%AF%B7%E6%B1%82]/</loc>
+    <loc>http://example.com/2023/09/15/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    
+    <lastmod>2023-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/09/15/git-stash%E7%94%A8%E6%B3%95%E5%B0%8F%E7%BB%93/</loc>
+    
+    <lastmod>2023-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/09/15/CORS%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82[%E7%AE%80%E5%8D%95%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%A4%8D%E6%9D%82%E8%AF%B7%E6%B1%82]/</loc>
+    
+    <lastmod>2023-09-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/09/15/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
     
     <lastmod>2023-09-16</lastmod>
     
