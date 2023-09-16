@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-09-16T07:08:33.311Z</updated>
+  <updated>2023-09-16T14:09:16.278Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git-stash用法小结</title>
+    <link href="http://example.com/2023/09/16/git-stash%E7%94%A8%E6%B3%95%E5%B0%8F%E7%BB%93/"/>
+    <id>http://example.com/2023/09/16/git-stash%E7%94%A8%E6%B3%95%E5%B0%8F%E7%BB%93/</id>
+    <published>2023-09-16T13:58:34.760Z</published>
+    <updated>2023-09-16T14:09:16.278Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;git-stash用法小结&quot;&gt;&lt;a href=&quot;#git-stash用法小结&quot; class=&quot;headerlink&quot; title=&quot;git-stash用法小结&quot;&gt;&lt;/a&gt;git-stash用法小结&lt;/h1&gt;&lt;h2 id=&quot;使用场景&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="http://example.com/categories/git/"/>
+    
+    
+    <category term="git" scheme="http://example.com/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>react面试题汇总</title>

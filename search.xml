@@ -19,6 +19,53 @@
       </tags>
   </entry>
   <entry>
+    <title>git-stash用法小结</title>
+    <url>/2023/09/16/git-stash%E7%94%A8%E6%B3%95%E5%B0%8F%E7%BB%93/</url>
+    <content><![CDATA[<h1 id="git-stash用法小结"><a href="#git-stash用法小结" class="headerlink" title="git-stash用法小结"></a>git-stash用法小结</h1><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><p>只提交部分文件到远程仓库。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight perl"><table><tr><td class="code"><pre><span class="line">git add demo.html // 提交到暂存区</span><br><span class="line">git stash -u -k  // 忽略其他修改，关键一步</span><br><span class="line">git commit -m <span class="string">&#x27;修改演示文件&#x27;</span> // 提交暂存区</span><br><span class="line">git pull // 拉取合并</span><br><span class="line">git <span class="keyword">push</span> origin master // 推到远程仓库</span><br><span class="line">git stash <span class="keyword">pop</span> // 恢复之前忽略的文件（非常重要的一步）</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><h3 id="1-stash当前修改"><a href="#1-stash当前修改" class="headerlink" title="1. stash当前修改"></a>1. stash当前修改</h3><p><code>git stash</code>会把所有未提交的修改（包括暂存的和非暂存的）都保存起来，用于后续恢复当前工作目录。<br>比如下面的中间状态，通过<code>git stash</code>命令推送一个新的储藏，当前的工作目录就干净了。</p>
+<p>实际应用中推荐给每个stash加一个message，用于记录版本，使用<code>git stash save</code>取代<code>git stash</code>命令。示例如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git stash save <span class="string">&quot;test-cmd-stash&quot;</span></span><br><span class="line">Saved working directory and index state On autoswitch: test-cmd-stash</span><br><span class="line">HEAD 现在位于 296e8d4 remove unnecessary postion reset <span class="keyword">in</span> onResume <span class="keyword">function</span></span><br><span class="line">$ git stash list</span><br><span class="line">stash@&#123;0&#125;: On autoswitch: test-cmd-stash</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-查看存储"><a href="#2-查看存储" class="headerlink" title="2.查看存储"></a>2.查看存储</h3><figure class="highlight perl"><table><tr><td class="code"><pre><span class="line">git stash list</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-重新应用缓存的stash"><a href="#3-重新应用缓存的stash" class="headerlink" title="3. 重新应用缓存的stash"></a>3. 重新应用缓存的stash</h3><p>可以通过<code>git stash pop</code>命令恢复之前缓存的工作目录，输出如下</p>
+<figure class="highlight perl"><table><tr><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br><span class="line">$ git stash <span class="keyword">pop</span></span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line"></span><br><span class="line">    new file:   style.css</span><br><span class="line"></span><br><span class="line">Changes <span class="keyword">not</span> staged <span class="keyword">for</span> commit:</span><br><span class="line"></span><br><span class="line">    modified:   index.html</span><br><span class="line"></span><br><span class="line">Dropped refs/stash@&#123;0&#125; (<span class="number">32</span>b3aa1d185dfe6d57b3c3cc3b32cbf3e380cc6a)</span><br></pre></td></tr></table></figure>
+
+<p>在使用<code>git stash apply</code>命令时可以通过名字指定使用哪个stash，默认使用最近的stash（即stash@{0}）。</p>
+<h3 id="4-移除stash"><a href="#4-移除stash" class="headerlink" title="4. 移除stash"></a>4. 移除stash</h3><p>可以使用<code>git stash drop</code>命令，后面可以跟着stash名字。下面是一个示例：</p>
+<figure class="highlight perl"><table><tr><td class="code"><pre><span class="line">$ git stash list</span><br><span class="line">stash@&#123;0&#125;: WIP on master: <span class="number">04</span>9d078 added the <span class="keyword">index</span> file</span><br><span class="line">stash@&#123;1&#125;: WIP on master: c264051 Revert <span class="string">&quot;added file_size&quot;</span></span><br><span class="line">stash@&#123;2&#125;: WIP on master: <span class="number">21</span>d80a5 added number to <span class="keyword">log</span></span><br><span class="line">$ git stash drop stash@&#123;0&#125;</span><br><span class="line">Dropped stash@&#123;0&#125; (<span class="number">364</span>e91f3f268f0900bc3ee613f9f733e82aaed43)</span><br></pre></td></tr></table></figure>
+
+<p>或者使用<code>git stash clear</code>命令，删除所有缓存的stash。</p>
+<h3 id="5-从stash创建分支"><a href="#5-从stash创建分支" class="headerlink" title="5. 从stash创建分支"></a>5. 从stash创建分支</h3><p>如果你储藏了一些工作，暂时不去理会，然后继续在你储藏工作的分支上工作，你在重新应用工作时可能会碰到一些问题。如果尝试应用的变更是针对一个你那之后修改过的文件，你会碰到一个归并冲突并且必须去化解它。如果你想用更方便的方法来重新检验你储藏的变更，你可以运行 git stash branch，这会创建一个新的分支，检出你储藏工作时的所处的提交，重新应用你的工作，如果成功，将会丢弃储藏。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git stash branch testchanges</span></span><br><span class="line">Switched to a new branch &quot;testchanges&quot;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">On branch testchanges</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Changes to be committed:</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">  (use <span class="string">&quot;git reset HEAD &lt;file&gt;...&quot;</span> to unstage)</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment">#      modified:   index.html</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment"># Changes not staged for commit:</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed)</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"><span class="comment">#      modified:   lib/simplegit.rb</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash">Dropped refs/stash@&#123;0&#125; (f0dfc4d5dc332d1cee34a634182e168c4efc3359)</span></span><br></pre></td></tr></table></figure>
+
+<p>这是一个很棒的捷径来恢复储藏的工作然后在新的分支上继续当时的工作。</p>
+<h3 id="7-暂存未跟踪或忽略的文件"><a href="#7-暂存未跟踪或忽略的文件" class="headerlink" title="7. 暂存未跟踪或忽略的文件"></a>7. 暂存未跟踪或忽略的文件</h3><p>默认情况下，<code>git stash</code>会缓存下列文件：</p>
+<ul>
+<li>添加到暂存区的修改（staged changes）</li>
+<li>Git跟踪的但并未添加到暂存区的修改（unstaged changes）</li>
+</ul>
+<p>但不会缓存一下文件：</p>
+<ul>
+<li>在工作目录中新的文件（untracked files）</li>
+<li>被忽略的文件（ignored files）</li>
+</ul>
+<p><code>git stash</code>命令提供了参数用于缓存上面两种类型的文件。使用<code>-u</code>或者<code>--include-untracked</code>可以stash untracked文件。使用<code>-a</code>或者<code>--all</code>命令可以stash当前目录下的所有修改。</p>
+<p>至于<code>git stash</code>的其他命令建议参考Git manual。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>git提供的工具很多，恰好用到就可以深入了解下。更方便的开发与工作的。</p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>react面试题汇总</title>
     <url>/2023/09/16/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/</url>
     <content><![CDATA[<p><a href="https://vue3js.cn/interview/React/React%20Hooks.html#%E4%BA%8C%E3%80%81%E6%9C%89%E5%93%AA%E4%BA%9B">面试题汇总</a></p>
